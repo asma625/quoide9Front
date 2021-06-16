@@ -1,0 +1,26 @@
+<!-- Start Product Area -->
+<div class="product-area section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <h2>Tendance</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="product-info">
+                    <div class="nav-main">
+                        <!-- Tab Nav -->
+                        <app-trending-menu (categoryEmitter)="getProductsFromCategory($event)"></app-trending-menu>
+                        <!--/ End Tab Nav -->
+                    </div>
+                    <app-trending-item-block [category]="currentCategory" [products]="products">
+                    </app-trending-item-block>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Product Area -->

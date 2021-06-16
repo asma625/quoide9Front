@@ -1,0 +1,8 @@
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li *ngFor="let category of categories; let first = first;" class="nav-item" (click)="onClick(category)">
+        <a [ngClass]="{'active': first}" class="nav-link" data-toggle="tab"
+           href="#trending-{{ category.categoryTitle }}-{{ category.id }}" role="tab">
+            {{ category.categoryTitle }}
+        </a>
+    </li>
+</ul>

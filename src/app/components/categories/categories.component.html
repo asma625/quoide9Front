@@ -1,0 +1,17 @@
+<div class="all-category">
+  <h3 class="cat-heading">
+    <i class="fa fa-bars" aria-hidden="true"></i>CATEGORIES
+  </h3>
+  <ul class="main-category d-none">
+    <li *ngFor="let category of categories">
+      <a href="#">{{ category.categoryTitle
+        }}<i *ngIf="category.subCategory.length" class="fa fa-angle-right" aria-hidden="true"></i>
+      </a>
+      <ul *ngIf="category.subCategory.length" class="sub-category ml-0">
+        <li *ngFor="let subCategory of category.subCategory">
+          <a href="#">{{ subCategory.categoryTitle }} </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

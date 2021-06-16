@@ -1,0 +1,15 @@
+<div class="tab-content" id="myTabContent">
+    <!-- Start Single Tab -->
+    <div class="tab-pane fade show active" id="trending-{{ category?.categoryTitle }}-{{ category?.id }}"
+         role="tabpanel">
+        <div class="tab-single">
+            <div class="row">
+                <div *ngFor="let product of products;" class="col-xl-3 col-lg-4 col-md-4 col-12">
+                    <app-trending-item [product]="product"></app-trending-item>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--/ End Single Tab -->
+</div>
